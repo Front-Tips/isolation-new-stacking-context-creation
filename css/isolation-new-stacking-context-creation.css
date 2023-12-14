@@ -1,0 +1,84 @@
+@import "./reset.css";
+
+/* ------------------------ */
+/*         Container        */
+/* ------------------------ */
+.hero {
+  isolation: isolate;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--color-black);
+}
+
+/* ------------------------ */
+/*           Title          */
+/* ------------------------ */
+.hero__title {
+  text-align: center;
+  font-size: 8rem;
+  font-family: var(--font-primary);
+  color: var(--white);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 28rem;
+    width: 28rem;
+    padding: 1rem;
+    margin: auto;
+    inset: 0;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  &::before {
+    background: linear-gradient(
+      0deg,
+      rgba(97, 0, 79, 0.1) 33%,
+      rgb(221, 0, 255) 100%
+    );
+    animation: spin3D 4.8s linear 0s infinite;
+  }
+
+  &::after {
+    background: linear-gradient(
+      0deg,
+      rgba(251, 91, 83, 0.1) 33%,
+      rgb(238, 0, 255) 100%
+    );
+    animation: spin3D 5.8s linear 0s infinite;
+  }
+
+  code {
+    position: relative;
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--white);
+    background: linear-gradient(
+      15deg,
+      rgba(160, 1, 171, 0.9) 33%,
+      rgb(238, 0, 255) 100%
+    );
+    font-size: 3.7rem;
+    border-radius: 15rem;
+    width: fit-content;
+    margin: 0.5rem auto;
+  }
+}
+
+/* ------------------------ */
+/*         Animation        */
+/* ------------------------ */
+@keyframes spin3D {
+  from {
+    transform: rotate3d(0.5, 0.7, 0.5, 360deg);
+  }
+
+  to {
+    transform: rotate3d(0deg);
+  }
+}

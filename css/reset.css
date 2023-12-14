@@ -1,0 +1,18 @@
+:root {
+  --font-primary: "Space Grotesk", sans-serif;
+  --primary: #ff14eb;
+  --dark-blue: #0a192f;
+  --dark-grey: #b1b4cc;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-blue);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
